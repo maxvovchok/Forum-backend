@@ -1,13 +1,10 @@
-const uuid = require("uuid").v4;
 const fs = require("fs").promises;
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const { validationResult } = require("express-validator");
 const User = require("../model/userModel");
-const { generateKey } = require("crypto");
 const { secret } = require("../config");
 const Role = require("../model/roleModel");
-const { userRolesEnum } = require("../constants");
 
 const generateAccessToken = (id, role) => {
   const payload = {
