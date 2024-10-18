@@ -1,7 +1,5 @@
 const express = require("express");
-const uuid = require("uuid").v4;
 const cors = require("cors");
-const fs = require("fs").promises;
 const morgan = require("morgan");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
