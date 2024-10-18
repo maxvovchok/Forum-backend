@@ -1,5 +1,5 @@
 .env
 
-environments
+/environments/
 
 config.js
