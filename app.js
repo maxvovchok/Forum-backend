@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 
 dotenv.config({
   path:
-    process.env.NODE_ENV === "prudction"
+    process.env.NODE_ENV === "production"
       ? "./environments/production.env"
       : "./environments/development.env",
 });
@@ -15,7 +15,7 @@ const userRouter = require("./router/userRouter");
 
 const app = express();
 
-if (process.env.NODE_ENV === "developmen") app.use(morgan("dev"));
+if (process.env.NODE_ENV === "development") app.use(morgan("dev"));
 
 mongoose
   .connect(process.env.MONGO_URL)
